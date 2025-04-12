@@ -1,0 +1,153 @@
+body {
+  background-color: #000000;
+  overflow: hidden;
+}
+
+main::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 80vh;
+  background: linear-gradient(90deg, #000 25%, rgba(0, 0, 0, 0) 75%) no-repeat;
+}
+
+main .personagem {
+  display: none;
+  height: 100vh;
+}
+
+main .personagem.selecionado {
+  display: block;
+}
+
+main .personagem .imagem {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.conteudo {
+  position: absolute;
+  top: 0;
+  left: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  max-width: 380px;
+  z-index: 1;
+}
+
+.conteudo .nome-personagem {
+  color: #fafafa;
+  font-size: 48px;
+  font-family: "Secular One";
+  font-weight: 400;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.nome-personagem::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: 100px;
+  bottom: -2px;
+  background: rgba(0, 0, 0, 0.4);
+  filter: blur(10px);
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.conteudo .descricao {
+  color: #fafafa;
+  font-family: "Rubik";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  position: relative;
+  z-index: 1;
+ /* background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  padding: 10px 10px 10px 0px;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.06); */
+}
+
+ .descricao::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -2px;
+  right: -2px;
+  bottom: -10px;
+  background: rgba(0, 0, 0, 0.5);
+  filter: blur(10px);
+  border-radius: 20px;
+  z-index: -1;
+} 
+
+
+.botoes {
+  background-color: rgba(0, 0, 0, 0.4);
+  position:absolute;
+  top: 0;
+  right: 0;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 16px;
+}
+
+.botoes .botao {
+  border: none;
+  background-color: transparent;
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+  transition: transform 0.1s ;
+  border-radius: 50%;
+}
+
+.botoes .botao img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  
+}
+
+
+.botoes .botao.selecionado {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px #d9d9d9;
+}
+
+.botoes .botao.cyberstorm.selecionado {
+  box-shadow: 0 0 10px #47ffc5;
+}
+
+.botoes .botao.codepixie.selecionado {
+  box-shadow: 0 0 10px #9747ff;
+}
+
+.botoes .botao.hexblade.selecionado {
+  box-shadow: 0 0 10px #ffa947;
+}
+
+.botoes .botao.neonpulse.selecionado {
+  box-shadow: 0 0 10px #e4309a;
+}
+
+.botoes .botao.codebreaker.selecionado {
+  box-shadow: 0 0 10px #fff047;
+}
